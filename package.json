@@ -1,0 +1,23 @@
+{
+  "name": "3-column-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass src/scss:public/style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldrek/FrontendMentor_3-column_preview_card_component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldrek/FrontendMentor_3-column_preview_card_component/issues"
+  },
+  "homepage": "https://github.com/aldrek/FrontendMentor_3-column_preview_card_component#readme",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
