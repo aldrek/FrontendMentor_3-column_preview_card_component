@@ -1,140 +1,170 @@
-
-/*////////////// [ Colors ] /////////////////////*/
-
-$bright_orange: hsl(31, 77%, 52%);
-$dark_cyan: hsl(184, 100%, 22%);
-$very_dark_cyan: hsl(179, 100%, 13%);
-$white : #fff;
-
+@use "./global-rules";
+@import "./colors";
 
 /*////////////// [ Content ] /////////////////////*/
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    font-family: sans-serif;
-    font-size: 15px;
-    font-weight: 1.2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+a {
+  text-decoration: none;
 }
 
 /*////////////// [ Main ] /////////////////////*/
 
-
-.container{
-    width: 60%;
-    height: 70%;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
+.container {
+  width: 60%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
 
 /*////////////// [ Cards ] /////////////////////*/
 
-.card_sedans{
-    background-color: $bright_orange;
-    border-radius: 5px 0 0 5px ;
+.card_sedans {
+  background-color: $bright_orange;
+  border-radius: 5px 0 0 5px;
 }
 
-.card_suvs{
-    background-color: $dark_cyan;
+.card_suvs {
+  background-color: $dark_cyan;
 }
 
-.card_luxury{
-    background-color: $very_dark_cyan;
-    border-radius: 0 5px 5px 0 ;
+.card_luxury {
+  background-color: $very_dark_cyan;
+  border-radius: 0 5px 5px 0;
 }
 
-.card{
-    display: grid;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
-    padding: 5%;
-} 
-
-.btn{
-    width: 70%;
-    height: 60%;
-    border: solid 2.5px $white;
-    background-color: $white;
-    border-radius: 50px;
-    text-align: center;
-    transition: 0.5s;
-    font-weight: 800;
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  padding: 5%;
 }
 
-.card_sedans .card_learn_more{
-    color: $bright_orange;
+.btn {
+  width: 75%;
+  height: 55px;
+  border: solid 2.5px $white;
+  background-color: $white;
+  border-radius: 50px;
+  text-align: center;
+  transition: 0.5s;
+  font-weight: 800;
 }
 
-.card_suvs .card_learn_more{
-    color: $dark_cyan;
+.card_sedans .card_learn_more {
+  color: $bright_orange;
 }
 
-.card_luxury .card_learn_more{
-    color: $very_dark_cyan;
+.card_suvs .card_learn_more {
+  color: $dark_cyan;
 }
 
-.btn:hover{
-    background-color: transparent;
-    color: #fff;
+.card_luxury .card_learn_more {
+  color: $very_dark_cyan;
 }
 
-.card p{
-    line-height: 1.5;
-    letter-spacing: 1px;
+.btn:hover {
+  background-color: transparent;
+  color: $white;
 }
 
-@media only screen and (max-width:1050px){
-    .container{
-        width: 80%;
-    }
+.card p {
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
-@media only screen and (max-width:790px){
-.container{
+@media only screen and (max-width: 1050px) {
+  .container {
     width: 80%;
-    height: 100vh;
+  }
+
+  .attribution {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .container {
+    width: 80%;
+    height: auto;
     flex-direction: column;
     padding: 5%;
-}
+  }
+  .btn {
+    width: 40%;
+  }
+  body {
+    height: auto;
+  }
 
-.card{
+  .attribution,
+  .attribution a {
+    width: 70% !important;
+    position: relative !important;
+    font-size: 12px !important;
+  }
+
+  .attribution a {
+    margin-left: 1px !important;
+  }
+
+  .card {
     min-height: 350px;
-}
+  }
 
-.card_sedans{
+  .card_sedans {
     background-color: $bright_orange;
-    border-radius: 5px 5px 0 0 ;
-}
+    border-radius: 5px 5px 0 0;
+  }
 
-.card_suvs{
+  .card_suvs {
     background-color: $dark_cyan;
-}
+  }
 
-.card_luxury{
+  .card_luxury {
     background-color: $very_dark_cyan;
-    border-radius: 0 0  5px 5px ;
-}
-
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 /*////////////// [ attribution ] /////////////////////*/
 .attribution {
-    display: none;
-    font-size: 11px;
-    text-align: center;
-  }
+  font-size: 11px;
+  text-align: center;
+  background-color: $footer_bg;
+  width: 60%;
+  height: 60px;
+  box-shadow: 0 0 0.5rem #babbbc;
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+.attribution_challenge_by,
+.attribution_coded_by {
+  flex: 1;
+}
+
+.attribution a {
+  color: $very_dark_cyan;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.attribution a,
+.attribution {
+  font-size: 16px;
+}

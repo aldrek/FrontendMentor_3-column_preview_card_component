@@ -1,11 +1,10 @@
-/*////////////// [ Colors ] /////////////////////*/
-/*////////////// [ Content ] /////////////////////*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*////////////// [ Content ] /////////////////////*/
 body {
   width: 100%;
   height: 100vh;
@@ -17,6 +16,10 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*////////////// [ Main ] /////////////////////*/
@@ -50,8 +53,8 @@ body {
 }
 
 .btn {
-  width: 70%;
-  height: 60%;
+  width: 75%;
+  height: 55px;
   border: solid 2.5px #fff;
   background-color: #fff;
   border-radius: 50px;
@@ -86,13 +89,31 @@ body {
   .container {
     width: 80%;
   }
+  .attribution {
+    width: 80% !important;
+  }
 }
 @media only screen and (max-width: 790px) {
   .container {
     width: 80%;
-    height: 100vh;
+    height: auto;
     flex-direction: column;
     padding: 5%;
+  }
+  .btn {
+    width: 40%;
+  }
+  body {
+    height: auto;
+  }
+  .attribution,
+.attribution a {
+    width: 70% !important;
+    position: relative !important;
+    font-size: 12px !important;
+  }
+  .attribution a {
+    margin-left: 1px !important;
   }
   .card {
     min-height: 350px;
@@ -111,11 +132,31 @@ body {
 }
 /*////////////// [ attribution ] /////////////////////*/
 .attribution {
-  display: none;
   font-size: 11px;
   text-align: center;
+  background-color: rgb(147, 232, 208);
+  width: 60%;
+  height: 60px;
+  box-shadow: 0 0 0.5rem #babbbc;
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.attribution_challenge_by,
+.attribution_coded_by {
+  flex: 1;
 }
 
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: hsl(179deg, 100%, 13%);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.attribution a,
+.attribution {
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
