@@ -9,13 +9,11 @@ This is a solution to the [3-column preview card component challenge on Frontend
 - [Built with](#built-with)
 - [Useful resources](#useful-resources)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ### Screenshot
 
-![Web design](./web-ss.png)
+![Web design](./images/web-ss.png)
 
-![Mobile design](./mobile-ss.png)
+![Mobile design](./images/mobile-ss.png)
 
 ### Links
 
@@ -25,7 +23,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
